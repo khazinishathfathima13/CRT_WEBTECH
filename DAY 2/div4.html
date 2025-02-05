@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aqua;
+            color: rgb(224, 189, 156);
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            padding:50px;
+        }
+        .marquee-container{
+            width: 80%;
+            margin: 20px auto;
+            padding: 10px;
+            height: 60px;
+            overflow: hidden;
+            position: relative;
+            border:5px solid brown;
+            background: linear-gradient(135deg,burlywood,brown);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgb(255, 184, 92);
+        }
+        .marquee-text{
+            position: absolute;
+            width: 100%;
+            font-size: 22px;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px black;
+            white-space: nowrap;
+        }
+        /*1.left to right scroll*/
+        .scroll-left{animation; scrollleft 10s linear infinite;}
+        @keyframes scrollleft {
+            from{transform: translateX(100%);}
+            to{transform: translateX(-100%) ;}}
+        /*2 alternate bounce*/
+        .bounce { animation: bounce 3s ease-in-out infinite alternate;text-align:center;}
+        @keyframes bounce { 
+            from {transform:translateX(0);}
+            to{translate:translateX(50%);}             
+        }
+        .slide-up{animation: slide 5s linear infinite;}
+        @keyframes slideup
+        from{ top:100%;}
+        to{top:100%}
+    </style>
+</head>
+<body>
+    <h1>optimized css marquee effects ⌛ </h1>
+    <div class="marquee-container">
+       <div class="marquee-text scroll-left"> 🎁 welcome to amazing marquee showcase !🐞</div>
+    </div>
+    <div class="marquee-container">
+         <div class="marquee-text bounce">
+            🐼 css-styled marquee with bounce effect 🐼</div>
+    </div>
+    <div class="marquee-container" style=""height:80px;>
+        <div class="marquee-text slide-up">
+           🐼 marquee with slide up effect 🎁</div>
+   </div>
+</body>
+</html>
