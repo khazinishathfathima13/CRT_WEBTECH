@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            margin: 50px;
+        }
+        .conatiner{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+        img{
+            width: 200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px  rgb(187, 171, 171);
+            transition: transform 0.5s ease-in-out;
+        }
+        .zoom:hover{
+            transform: scale(1.5);
+        }
+        .zoom-animate{
+            animation: zoomEffect 3s infinite alternate ease-in-out;
+        }
+        @keyframes zoomEffect {
+            0%{transform: scale(1);}
+            100%{transform: scale(1.3);}
+        }
+        .stretch:hover{
+            transform: scaleX(1.5);
+        }
+        .tall:hover{
+            transform: scaleY(1.5);
+        }
+        .shrink:hover{
+            transform: scale(0.7);
+        }
+    </style>
+</head>
+<body>
+    <h1>Hover to Zoom</h1>
+    <div class="container">
+        <h2>1.Floating Effect</h2>
+        <img src="https://images.alphacoders.com/683/683501.jpg"alt="Zoom Image" class="zoom">
+    </div>
+    <div>
+        <h2>2.Continuous zoom in & out</h2>
+        <img src="https://www.1zoom.me/big/29/49774-majiha.jpg" alt="Zoom-animate" class="zoom-animate">
+    </div>
+    <div>
+        <h2>3.Hover to Stretch Horizantally</h2>
+        <img src="https://thumbs.dreamstime.com/b/four-cute-cats-20650677.jpg" alt="Stretch Image" class="stretch">
+    </div>
+    <div>
+        <h2>4.Hover to Stretch Vertically</h2>
+        <img src="https://tse2.mm.bing.net/th?id=OIP.-XvN2ur72DMh-1Nmm7aoZQHaEK&pid=Api&P=0&h=180" alt="Tall Image" class="tall">
+    </div>
+    <div>
+        <h2>5.Hover to Shrink</h2>
+        <img src="https://cdn-prd.content.metamorphosis.com/wp-content/uploads/sites/6/2022/12/shutterstock_781327003-1-768x512.jpg" alt="Shrink Image" class="shrink">
+    </div>
+   
+</body>
+</html>
