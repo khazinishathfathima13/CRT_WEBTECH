@@ -1,0 +1,182 @@
+{% extends "base.html" %}
+
+{% block title %}Academic Performance Tracker - Home{% endblock %}
+
+{% block content %}
+<!-- Header with blue gradient -->
+<div class="header-gradient">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-graduation-cap me-2"></i>
+                Academic Performance Tracker
+            </a>
+        </div>
+    </nav>
+</div>
+
+<!-- Hero Section -->
+<div class="hero-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <div class="hero-content">
+                    <i class="fas fa-university hero-icon"></i>
+                    <h1 class="hero-title">Academic Performance Tracking System</h1>
+                    <p class="hero-subtitle">Anantha Lakshmi Institute Of Technology And Sciences</p>
+                    <p class="hero-description">View your academic results instantly</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Search Form -->
+        <div class="row justify-content-center mt-4">
+            <div class="col-lg-6">
+                <div class="search-card">
+                    <div class="search-header">
+                        <i class="fas fa-search me-2"></i>
+                        Search Your Results
+                    </div>
+                    <div class="search-body">
+                        {% if error %}
+                        <div class="alert alert-danger" role="alert">
+                            <i class="fas fa-exclamation-triangle me-2"></i>
+                            {{ error }}
+                        </div>
+                        {% endif %}
+                        
+                        <form method="POST" action="{{ url_for('search_student') }}">
+                            <div class="mb-3">
+                                <label for="student_id" class="form-label">
+                                    <i class="fas fa-id-card me-2"></i>Student ID Number
+                                </label>
+                                <input type="text" class="form-control" id="student_id" name="student_id" 
+                                       placeholder="Enter your Student ID (e.g., 232G1A3224)" required>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="year" class="form-label">
+                                        <i class="fas fa-calendar me-2"></i>Academic Year
+                                    </label>
+                                    <select class="form-select" id="year" name="year" required>
+                                        <option value="">Select Year</option>
+                                        <option value="1">1st Year</option>
+                                        <option value="2">2nd Year</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="col-md-6 mb-3">
+                                    <label for="semester" class="form-label">
+                                        <i class="fas fa-bookmark me-2"></i>Semester
+                                    </label>
+                                    <select class="form-select" id="semester" name="semester" required>
+                                        <option value="">Select Semester</option>
+                                        <option value="1">1st Semester</option>
+                                        <option value="2">2nd Semester</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-lg w-100">
+                                <i class="fas fa-search me-2"></i>View Results
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Features Section -->
+<div class="features-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h5>Performance Analytics</h5>
+                    <p>View detailed performance charts and analytics to track your academic progress.</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4">
+                <div class="feature-card">
+                    <div class="feature-icon download-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <h5>Download Results</h5>
+                    <p>Download your results as PDF or print them directly for official use.</p>
+                    <a href="#" class="btn btn-outline-success btn-sm">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4">
+                <div class="feature-card">
+                    <div class="feature-icon stats-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h5>Class Statistics</h5>
+                    <p>View class averages, topper information, and compare your performance.</p>
+                    <a href="#" class="btn btn-outline-info btn-sm">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- About Section -->
+<div class="about-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h3>About the System</h3>
+                <p>The Academic Performance Tracking System provides B.Tech students, faculty, and parents with instant access to academic results. The system displays results in ALITS format with comprehensive analytics and statistics.</p>
+                
+                <div class="row mt-4">
+                    <div class="col-md-4">
+                        <div class="user-type">
+                            <i class="fas fa-user-graduate"></i>
+                            <h6>For Students</h6>
+                            <p>View your grades, CGPA, and performance analytics.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="user-type">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <h6>For Faculty</h6>
+                            <p>Monitor student performance and class statistics.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="user-type">
+                            <i class="fas fa-users"></i>
+                            <h6>For Parents</h6>
+                            <p>Track your child's academic progress easily.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h6>Academic Performance Tracking System</h6>
+                <p>Anantha Lakshmi Institute Of Technology And Sciences</p>
+            </div>
+            <div class="col-lg-4 text-end">
+                <p><i class="fas fa-code"></i> Built for B.Tech Students & Faculty</p>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endblock %}

@@ -1,0 +1,83 @@
+Build me a fully functional, pixel-perfect Academic Performance Tracking System web application that matches this exact design reference I am providing (screenshot + PDF).
+
+Design Requirements (must match exactly):
+
+Header with title: “Academic Performance Tracker” and an icon.
+
+Student info card with name, ID, and a blue banner exactly like in the screenshot.
+
+Print and PDF buttons in the header area of the student details.
+
+Result section with a black title bar containing the college name (“ANANTHA LAKSHMI INSTITUTE OF TECHNOLOGY AND SCIENCES”) and subtitle “Examination Results”.
+
+Two info boxes (Student details left, CGPA/Percentage/Total/Result right).
+
+“Theory Subjects” table and “Laboratory Courses” table styled exactly as in the screenshot (with alternating row colors, grade color tags, and borders).
+
+“Class Statistics” section with cards showing total students, failed, passed, average CGPA with the exact colors in the screenshot.
+
+“Performance Chart” section with a line + bar chart exactly as shown, same colors and labels.
+
+“Search Another Student” button at the bottom.
+
+Footer with title “Academic Performance Tracking System” and college name.
+
+Functionality Requirements:
+
+Homepage with a form to search by Student ID, Year, Semester.
+
+Data fetched from SQLite database containing:
+
+Name, ID, Year, Semester
+
+5 theory subjects with marks and grades
+
+3 labs with internal, external, total, and grade
+
+CGPA (S=10, A=9, B=8, C=7, D=6, E=5, F=FAIL)
+
+Percentage, Result (PASS/FAIL)
+
+Calculate total marks, CGPA, and percentage dynamically from marks.
+
+Show class average and topper for the semester.
+
+Display the performance chart with both marks and grade points on separate axes (like the screenshot).
+
+PDF download must produce an identical output to the on-screen design.
+
+Print button should print the same styled layout.
+
+Technical Requirements:
+
+Frontend: HTML, CSS, JS with Bootstrap (or Tailwind) for responsiveness and same styling.
+
+Backend: Python Flask to fetch data from SQLite database.
+
+Charts: Chart.js for line + bar combo chart.
+
+PDF: jsPDF or pdfkit to export the exact styled HTML result as a PDF.
+
+Folder Structure:
+
+/templates for HTML templates
+
+/static/css for CSS
+
+/static/js for JS
+
+/database/students.db for SQLite database
+
+Provide clean, well-commented, modular code.
+
+Include README.md with step-by-step instructions to run the app locally.
+
+Important:
+
+The look and feel must be identical to the screenshot/PDF provided.
+
+No placeholder styling — match font sizes, colors, borders, button shapes exactly.
+
+Fully responsive on desktop and mobile.
+
+No login required — direct search access.

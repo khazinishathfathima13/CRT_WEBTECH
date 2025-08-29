@@ -1,0 +1,103 @@
+🎓 Academic Performance Tracking System
+Build this project with zero bugs and fully functional, step-by-step. Treat me like a beginner and explain everything from scratch like I’m a kid. Break the full project into clear steps and give code, explanation, and folder structure for each part.
+
+✅ PROJECT DETAILS (Include Everything Below Exactly):
+Users: B.Tech Students, College Faculty (and optionally parents)
+
+No login system – Just enter ID, Year, and Semester to see results.
+
+Data Source: I will provide real student data. It includes:
+
+Name, ID
+
+Marks for 5 subjects per semester
+
+3 Labs per semester (internal + external marks)
+
+Covers 1st Year (1st & 2nd Sem) and 2nd Year (1st & 2nd Sem) only
+
+Store this in a SQLite database
+
+Use Flask for backend and routing
+
+Use HTML, CSS, JavaScript for frontend
+
+Design homepage with:
+
+Background image (professional & attractive for students/teachers/parents)
+
+Input fields: ID Number, Year (dropdown), Semester (dropdown)
+
+Submit button
+
+When user submits ID + Year + Semester:
+
+Fetch data from the database
+
+Display the result in a JNTU-style table
+
+Include:
+
+Subject-wise marks and grades
+
+Lab internals and externals
+
+Total marks, overall percentage
+
+CGPA calculated based on:
+
+S = 10, A = 9, B = 8, C = 7, D = 6, E = 5, F = FAIL
+
+Result status: PASS or FAIL
+
+Include combo graphs (Line + Bar) using Chart.js to show student performance
+
+Additional Features:
+
+Download result as PDF
+
+Print result
+
+Show Class Average
+
+Show Topper of the class
+
+Website should run locally on my laptop (Windows)
+
+Provide:
+
+Full folder structure:
+
+/frontend
+
+/backend
+
+/database
+
+/templates
+
+/static (images, CSS, JS)
+
+All required Flask setup (app.py, routes, database.py)
+
+SQL schema for creating the database and inserting data
+
+Example HTML files with placeholders for results
+
+How to run Flask app from terminal
+
+All graph and PDF download logic
+
+Help me test it step-by-step and give debugging help if I get errors
+
+⚠️ Important:
+
+Make sure the result table looks exactly like JNTU result format
+
+Use only open-source libraries
+
+Keep UI clean and responsive
+
+Assume no internet connection required to run it (except for static libraries)
+
+Help me build the full project from scratch and guide me step-by-step with explanations and clean code.

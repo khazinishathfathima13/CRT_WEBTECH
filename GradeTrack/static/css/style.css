@@ -1,0 +1,508 @@
+/* Academic Performance Tracker - Custom Styles */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+    --info-color: #06b6d4;
+    --light-bg: #f8fafc;
+    --dark-text: #1e293b;
+    --border-color: #e2e8f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-text);
+    background-color: var(--light-bg);
+}
+
+/* Header Styles */
+.header-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 80px;
+    color: white;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 60px 0 80px;
+    color: white;
+}
+
+.hero-content {
+    margin-bottom: 40px;
+}
+
+.hero-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    opacity: 0.95;
+}
+
+.hero-description {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* Search Card */
+.search-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.search-header {
+    background: var(--primary-color);
+    color: white;
+    padding: 20px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.search-body {
+    padding: 30px;
+}
+
+.search-body .form-label {
+    color: #1e293b;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    padding: 12px 15px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.25);
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    border: none;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Features Section */
+.features-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.feature-card {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 2rem;
+    color: white;
+}
+
+.feature-icon.download-icon {
+    background: var(--success-color);
+}
+
+.feature-icon.stats-icon {
+    background: var(--info-color);
+}
+
+/* About Section */
+.about-section {
+    padding: 80px 0;
+    background: var(--light-bg);
+}
+
+.user-type {
+    text-align: center;
+    padding: 20px;
+}
+
+.user-type i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* Student Banner */
+.student-banner {
+    background: var(--primary-color);
+    color: white;
+    padding: 20px 0;
+}
+
+.student-info {
+    display: flex;
+    align-items: center;
+}
+
+.student-info i {
+    font-size: 2.5rem;
+    opacity: 0.8;
+}
+
+/* Result Section */
+.result-section {
+    padding: 40px 0;
+    background: white;
+}
+
+.college-header {
+    background: #2d3748;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+.college-header h4 {
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.college-header h6 {
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* Info Boxes */
+.info-box {
+    background: #f8f9fa;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    height: 100%;
+}
+
+.info-box table td {
+    padding: 8px 12px;
+    border: none;
+}
+
+.info-box table td:first-child {
+    width: 40%;
+    font-weight: 500;
+}
+
+/* Section Titles */
+.section-title {
+    background: #2d3748;
+    color: white;
+    padding: 12px 20px;
+    margin: 0 0 20px 0;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+/* Tables */
+.subjects-table, .lab-table {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.subjects-table thead, .lab-table thead {
+    background: #2d3748;
+    color: white;
+}
+
+.subjects-table th, .lab-table th {
+    padding: 15px 12px;
+    font-weight: 600;
+    border: none;
+}
+
+.subjects-table td, .lab-table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.subjects-table tbody tr:nth-child(odd),
+.lab-table tbody tr:nth-child(odd) {
+    background: #f8f9fa;
+}
+
+/* Grade Badges */
+.grade-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: white;
+}
+
+.grade-s { background: #10b981; }
+.grade-a { background: #3b82f6; }
+.grade-b { background: #8b5cf6; }
+.grade-c { background: #f59e0b; }
+.grade-d { background: #f97316; }
+.grade-e { background: #ef4444; }
+.grade-f { background: #6b7280; }
+
+/* Statistics Section */
+.stats-section {
+    margin: 40px 0;
+}
+
+.stats-header {
+    background: var(--info-color);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px 8px 0 0;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.stat-card {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.total-students .stat-number { color: var(--primary-color); }
+.passed-students .stat-number { color: var(--success-color); }
+.failed-students .stat-number { color: var(--danger-color); }
+.avg-cgpa .stat-number { color: var(--warning-color); }
+
+/* Chart Section */
+.chart-section {
+    margin: 40px 0;
+}
+
+.chart-header {
+    background: var(--success-color);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px 8px 0 0;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.chart-container {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    padding: 30px;
+}
+
+.chart-container canvas {
+    max-height: 400px;
+}
+
+/* Footer */
+.footer {
+    background: #2d3748;
+    color: white;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+.footer h6 {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.footer p {
+    margin: 0;
+    opacity: 0.8;
+}
+
+/* Print Styles */
+@media print {
+    .print-hidden {
+        display: none !important;
+    }
+    
+    .header-gradient,
+    .student-banner {
+        background: #2563eb !important;
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+    
+    .college-header,
+    .section-title,
+    .stats-header,
+    .chart-header {
+        background: #2d3748 !important;
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+    
+    .grade-badge {
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+    
+    body {
+        background: white !important;
+    }
+    
+    .result-section {
+        padding: 20px 0;
+    }
+    
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .search-body {
+        padding: 20px;
+    }
+    
+    .features-section,
+    .about-section {
+        padding: 50px 0;
+    }
+    
+    .student-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .student-info i {
+        margin-bottom: 10px;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .college-header h4 {
+        font-size: 1.2rem;
+    }
+    
+    .table-responsive {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-icon {
+        font-size: 3rem;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .search-header {
+        padding: 15px;
+        font-size: 1rem;
+    }
+    
+    .search-body {
+        padding: 15px;
+    }
+    
+    .feature-card {
+        padding: 20px;
+    }
+    
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .stat-card {
+        padding: 20px;
+    }
+    
+    .chart-container {
+        padding: 15px;
+    }
+}

@@ -1,0 +1,161 @@
+I'm building a zero-bug, fully functional academic performance tracker for my college. Please guide me through every step with beginner-friendly explanations as if I'm learning for the first time. Here's exactly what I need:
+
+Core Requirements:
+
+User-Focused Design
+
+For B.Tech students, faculty, and parents
+
+No login system - just ID/Year/Semester input
+
+Professional interface with educational theme
+
+Data Management
+
+SQLite database schema for:
+
+Student profiles (Name, ID)
+
+Academic records (5 subjects + 3 labs per semester)
+
+Years 1 & 2 (both semesters)
+
+Sample INSERT queries for test data
+
+Flask Backend
+
+Complete app.py setup
+
+Routes for:
+
+Homepage
+
+Result fetching
+
+PDF generation
+
+Database connection handling
+
+Frontend Components
+
+HTML/CSS/JS templates for:
+
+Homepage with input form
+
+Result display page (JNTU-style table)
+
+Chart.js implementation for:
+
+Performance graphs (line + bar combo)
+
+Class comparison visuals
+
+Key Features
+
+Grade calculation (S=10, A=9...F=FAIL)
+
+CGPA computation
+
+PASS/FAIL determination
+
+Class average display
+
+Topper identification
+
+PDF export functionality
+
+Print styling
+
+Step-by-Step Guidance Request:
+
+Folder structure creation
+
+/backend (Flask files)
+
+/frontend (static assets)
+
+/templates
+
+/database
+
+Database setup
+
+SQL schema creation
+
+Sample data insertion
+
+Connection testing
+
+Flask implementation
+
+Route definitions
+
+Form handling
+
+Database queries
+
+Error handling
+
+Frontend development
+
+Responsive form design
+
+Result table formatting
+
+Graph rendering
+
+PDF generation logic
+
+Testing protocol
+
+Data validation tests
+
+Edge case handling
+
+UI responsiveness check
+
+PDF/print verification
+
+Special Requests:
+
+Use only open-source libraries
+
+Include comments explaining all code blocks
+
+Provide troubleshooting tips for common errors
+
+Give visual examples of the JNTU-style table
+
+Explain Chart.js configuration in detail
+
+Include local deployment instructions for Windows
+
+Deliverables Needed:
+
+Complete file tree structure
+
+SQLite database file with sample data
+
+All Flask route handlers
+
+HTML templates with CSS/JS
+
+Chart.js implementation code
+
+PDF generation script
+
+Step-by-step testing checklist
+
+Please present the information in this order:
+
+Explanation of concept
+
+Code implementation
+
+Expected output
+
+Common pitfalls
+
+Debugging tips
+
+Make sure all components work together seamlessly when run locally on Windows without internet. Assume I have Python 3.8+ and VSCode installed, but need help with everything else.
