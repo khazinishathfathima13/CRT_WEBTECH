@@ -6,28 +6,14 @@ class Student(db.Model):
     __tablename__ = 'students'
     
     id = db.Column(db.Integer, primary_key=True)
-    student_id = db.Column(db.String(20), nullable=False)
+    student_id = db.Column(db.String(20), unique=True, nullable=False)
     name = db.Column(db.String(100), nullable=False)
     year = db.Column(db.Integer, nullable=False)  # 1 or 2
     semester = db.Column(db.Integer, nullable=False)  # 1 or 2
     
-    @property
-    def theory_subjects(self):
-        """Get theory subjects for this specific semester"""
-        return TheorySubject.query.filter_by(
-            student_id=self.student_id, year=self.year, semester=self.semester
-        ).all()
-    
-    @property
-    def lab_courses(self):
-        """Get lab courses for this specific semester"""
-        return LabCourse.query.filter_by(
-            student_id=self.student_id, year=self.year, semester=self.semester
-        ).all()
-    
-    __table_args__ = (
-        db.UniqueConstraint('student_id', 'year', 'semester', name='_student_year_semester_uc'),
-    )
+    # Relationships
+    theory_subjects = db.relationship('TheorySubject', backref='student', lazy=True, cascade='all, delete-orphan')
+    lab_courses = db.relationship('LabCourse', backref='student', lazy=True, cascade='all, delete-orphan')
     
     def __repr__(self):
         return f'<Student {self.student_id}: {self.name}>'
@@ -39,8 +25,6 @@ class Student(db.Model):
         
         # Calculate from theory subjects
         for subject in self.theory_subjects:
-            if subject.marks is None or subject.marks == 0:  # Handle LONG ABSENT cases
-                continue
             grade_point = self.get_grade_point(subject.grade)
             if grade_point > 0:  # Exclude F grades
                 total_credits += 4  # Assuming 4 credits per theory subject
@@ -48,8 +32,6 @@ class Student(db.Model):
         
         # Calculate from lab courses
         for lab in self.lab_courses:
-            if lab.total_marks is None or lab.total_marks == 0:  # Handle LONG ABSENT cases
-                continue
             grade_point = self.get_grade_point(lab.grade)
             if grade_point > 0:  # Exclude F grades
                 total_credits += 2  # Assuming 2 credits per lab
@@ -106,13 +88,11 @@ class TheorySubject(db.Model):
     __tablename__ = 'theory_subjects'
     
     id = db.Column(db.Integer, primary_key=True)
-    student_id = db.Column(db.String(20), nullable=False)
+    student_id = db.Column(db.String(20), db.ForeignKey('students.student_id'), nullable=False)
     subject_name = db.Column(db.String(100), nullable=False)
     subject_code = db.Column(db.String(20), nullable=False)
     marks = db.Column(db.Integer, nullable=False)
     grade = db.Column(db.String(2), nullable=False)
-    year = db.Column(db.Integer, nullable=False)
-    semester = db.Column(db.Integer, nullable=False)
     
     def __repr__(self):
         return f'<TheorySubject {self.subject_name}: {self.marks} ({self.grade})>'
@@ -122,15 +102,13 @@ class LabCourse(db.Model):
     __tablename__ = 'lab_courses'
     
     id = db.Column(db.Integer, primary_key=True)
-    student_id = db.Column(db.String(20), nullable=False)
+    student_id = db.Column(db.String(20), db.ForeignKey('students.student_id'), nullable=False)
     lab_name = db.Column(db.String(100), nullable=False)
     lab_code = db.Column(db.String(20), nullable=False)
     internal_marks = db.Column(db.Integer, nullable=False)
     external_marks = db.Column(db.Integer, nullable=False)
     total_marks = db.Column(db.Integer, nullable=False)
     grade = db.Column(db.String(2), nullable=False)
-    year = db.Column(db.Integer, nullable=False)
-    semester = db.Column(db.Integer, nullable=False)
     
     def __repr__(self):
         return f'<LabCourse {self.lab_name}: {self.total_marks} ({self.grade})>'

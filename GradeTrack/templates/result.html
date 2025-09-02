@@ -120,21 +120,11 @@
                         <tr>
                             <td>{{ loop.index }}</td>
                             <td>{{ subject.subject_name }}</td>
+                            <td>{{ subject.marks }}</td>
                             <td>
-                                {% if subject.marks is none or subject.marks == 0 %}
-                                    <span class="text-danger fw-bold">Result Not Found</span>
-                                {% else %}
-                                    {{ subject.marks }}
-                                {% endif %}
-                            </td>
-                            <td>
-                                {% if subject.marks is none or subject.marks == 0 %}
-                                    <span class="grade-badge grade-f">F</span>
-                                {% else %}
-                                    <span class="grade-badge grade-{{ subject.grade.lower() }}">
-                                        {{ subject.grade }}
-                                    </span>
-                                {% endif %}
+                                <span class="grade-badge grade-{{ subject.grade.lower() }}">
+                                    {{ subject.grade }}
+                                </span>
                             </td>
                         </tr>
                         {% endfor %}
@@ -163,35 +153,13 @@
                         <tr>
                             <td>{{ loop.index }}</td>
                             <td>{{ lab.lab_name }}</td>
+                            <td>{{ lab.internal_marks }}</td>
+                            <td>{{ lab.external_marks }}</td>
+                            <td>{{ lab.total_marks }}</td>
                             <td>
-                                {% if lab.internal_marks is none or lab.internal_marks == 0 %}
-                                    <span class="text-danger fw-bold">N/A</span>
-                                {% else %}
-                                    {{ lab.internal_marks }}
-                                {% endif %}
-                            </td>
-                            <td>
-                                {% if lab.external_marks is none or lab.external_marks == 0 %}
-                                    <span class="text-danger fw-bold">N/A</span>
-                                {% else %}
-                                    {{ lab.external_marks }}
-                                {% endif %}
-                            </td>
-                            <td>
-                                {% if lab.total_marks is none or lab.total_marks == 0 %}
-                                    <span class="text-danger fw-bold">Result Not Found</span>
-                                {% else %}
-                                    {{ lab.total_marks }}
-                                {% endif %}
-                            </td>
-                            <td>
-                                {% if lab.total_marks is none or lab.total_marks == 0 %}
-                                    <span class="grade-badge grade-f">F</span>
-                                {% else %}
-                                    <span class="grade-badge grade-{{ lab.grade.lower() }}">
-                                        {{ lab.grade }}
-                                    </span>
-                                {% endif %}
+                                <span class="grade-badge grade-{{ lab.grade.lower() }}">
+                                    {{ lab.grade }}
+                                </span>
                             </td>
                         </tr>
                         {% endfor %}
